@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'MiSans';
+    src: url('./font/MiSans-Heavy.woff2') format('woff2'),
+        url('./font/MiSans-Heavy.woff') format('woff'),
+        url('./font/MiSans-Heavy.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MiSans';
+    src: url('./font/MiSans-Normal.woff2') format('woff2'),
+        url('./font/MiSans-Normal.woff') format('woff'),
+        url('./font/MiSans-Normal.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MiSans';
+    src: url('./font/MiSans-Light.woff2') format('woff2'),
+        url('./font/MiSans-Light.woff') format('woff'),
+        url('./font/MiSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    font-family: "Misans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    min-height: 100vh;
+    width: 100%;
+    background: url(./bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: visible;
+}
+
+
+body::before {
+    content: "";
+    position: absolute; /* 一定要用绝对定位 */
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(30px); /* 模糊半径 */
+    z-index: -1;
+}
